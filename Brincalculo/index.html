@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+            overflow: hidden;
+		}
+        #canvasArea {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        
+	</style>
+    <!-- Libs and GDJS core files : -->
+		<script src="libs/pixi.js"></script>
+	<script src="libs/jshashtable.js"></script>
+	<script src="libs/howler.min.js"></script>
+	<script src="gd.js"></script>
+	<script src="libs/hshg.js"></script>
+	<script src="commontools.js"></script>
+	<script src="inputmanager.js"></script>
+	<script src="runtimeobject.js"></script>
+	<script src="runtimescene.js"></script>
+	<script src="scenestack.js"></script>
+	<script src="polygon.js"></script>
+	<script src="force.js"></script>
+	<script src="layer.js"></script>
+	<script src="timer.js"></script>
+	<script src="imagemanager.js"></script>
+	<script src="runtimegame.js"></script>
+	<script src="variable.js"></script>
+	<script src="variablescontainer.js"></script>
+	<script src="eventscontext.js"></script>
+	<script src="runtimebehavior.js"></script>
+	<script src="spriteruntimeobject.js"></script>
+	<script src="soundmanager.js"></script>
+	<script src="runtimescenetools.js"></script>
+	<script src="inputtools.js"></script>
+	<script src="objecttools.js"></script>
+	<script src="cameratools.js"></script>
+	<script src="soundtools.js"></script>
+	<script src="storagetools.js"></script>
+	<script src="stringtools.js"></script>
+	<script src="windowtools.js"></script>
+	<script src="code0.js"></script>
+	<script src="Extensions/TextObject/textruntimeobject.js"></script>
+	<script src="code1.js"></script>
+	<script src="code2.js"></script>
+	<script src="code3.js"></script>
+	<script src="code4.js"></script>
+	<script src="code5.js"></script>
+	<script src="code6.js"></script>
+	<script src="code7.js"></script>
+	<script src="code8.js"></script>
+	<script src="code9.js"></script>
+	<script src="code10.js"></script>
+	<script src="code11.js"></script>
+	<script src="code12.js"></script>
+	<script src="code13.js"></script>
+	<script src="code14.js"></script>
+	<script src="code15.js"></script>
+	<script src="code16.js"></script>
+	<script src="code17.js"></script>
+	<script src="code18.js"></script>
+	<script src="code19.js"></script>
+	<script src="code20.js"></script>
+	<script src="code21.js"></script>
+	<script src="code22.js"></script>
+	<script src="code23.js"></script>
+	<script src="code24.js"></script>
+	<script src="code25.js"></script>
+	<script src="code26.js"></script>
+	<script src="data.js"></script>
+
+
+</head>
+<body>
+    <div id="canvasArea"></div>
+
+    
+	<script>
+
+    (function() {
+        //Initialization
+        gdjs.registerObjects();
+        gdjs.registerBehaviors();
+        gdjs.registerGlobalCallbacks();
+
+        var game = new gdjs.RuntimeGame(gdjs.projectData, {});
+
+        //Create a renderer
+        var canvasArea = document.getElementById("canvasArea");
+        game.createStandardCanvas(canvasArea);
+
+        //Bind keyboards/mouse/touch events
+        game.bindStandardEvents(window, document);
+
+        //Load all assets and start the game
+        game.loadAllAssets(onAssetsLoaded);
+        function onAssetsLoaded() {
+            game.startStandardGameLoop();
+        }
+    })();
+
+	</script>
+</body>
+</html>
