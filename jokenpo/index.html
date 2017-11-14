@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css.css"/>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="materialize/css/materialize.min.css">
+	</head>
+	<body>
+		<div class="row">
+			<div class="row"></div>
+			<div class="col s12 l6 offset-l3">
+				<div class="card">
+					<br/>
+					<h3 class="center">Janken-pon</h3>
+					<div class="input-field col l8 s10 offset-l2 offset-s1">
+						<input id="nome" name="nome" type="text"/>
+						<label for="nome">Nome</label>
+					</div>
+					<div class="col s12 l8 offset-l2 offset-s1">
+						<p>
+							<input id="radio_fem" type="radio" name="sexo" value="Feminino"/>
+							<label for="radio_fem">Feminino</label>
+						
+							<input id="radio_masc" type="radio" name="sexo" value="Masculino"/>
+							<label for="radio_masc">Masculino</label>
+						
+							<input id="radio_outro" type="radio" name="sexo" value="Outro"/>
+							<label for="radio_outro">Outro</label>
+						</p>
+					</div>
+					<button class="btn waves-effect waves-light col btn-large s10 l8 offset-l2 offset-s1" name="action" 
+						onclick="iniciarPartida();">	Jogar
+					</button>					
+					<br/>
+					<br/>
+					
+					<div id="elementos_jogo" class="col s10 l8 offset-l2 offset-s1">
+						<div class="col s12">
+							<br/>
+							<h4 name="cronometro" class="center">00:00:00</h4>
+							<br/>
+							<h5 class="center">Selecione uma opção </h5>
+						</div>
+						<div class="col s12 center">
+							<button name="btn_opcao" onclick="escolherOpcao(1);"><img src="imagens/pedra_hand.png"/></button>
+							&nbsp;
+							<button name="btn_opcao" onclick="escolherOpcao(2);"><img src="imagens/papel_hand.png"/></button>
+							&nbsp;
+							<button name="btn_opcao" onclick="escolherOpcao(3);"><img src="imagens/tesoura_hand.png"/></button>
+							&nbsp;
+						</div>
+						<div class="col s12 center">
+							<h5 class="col s6 left"> Você</h5>
+							
+							<h5 class="col s6 right" > Adversario</h5>
+						</div>
+						<div class="col s12 center">
+							<img id="imd_opcao_escolhida" src="imagens/blank.png"/>
+							&nbsp;
+							<img src="imagens/vs.png"/>
+							&nbsp;
+							<img id="imd_opcao_adversario" src="imagens/blank.png"/>
+							&nbsp;
+							<h5 id="resultado" class="center">Resultado: -</h5>
+						</div>
+					</div>
+					<div class="col s12">
+						<blockquote id="resultado_geral">					  
+						</blockquote>
+					</div>
+					<br/>
+					<br/>
+					<div class="center">
+						<button class="waves-effect waves-light btn" name="btn_encerrar" onclick="encerrarJogo();">Encerrar jogo</button>											
+						<a class="waves-effect waves-light btn modal-trigger" href="#modalResultados">Histórico de partidas</a>
+					</div>		
+					
+					<!-- Modal Structure -->
+					<div id="modalResultados" class="modal  modal-fixed-footer">
+						<div class="modal-content">
+							<h4>Resultados</h4>
+							<table class="striped" id="resultados" border="2px">
+								<tr>		
+									<th>Vencedor</th>	
+									<th>Placar da rodada</th>				
+									<th>Jogada Player</th>
+									<th>Jogada Adversario</th>					
+									<th>Duração</th>
+								<tr>
+							</table>
+						</div>
+						<div class="modal-footer">
+						  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+						</div>
+					</div>
+					<br/>
+				</div>
+			</div>
+		</div>
+	</body>	
+	<script src="materialize/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js.js"> </script>
+	<!-- Compiled and minified JavaScript -->
+	<script src="materialize/js/materialize.min.js"></script>
+</html>

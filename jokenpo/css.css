@@ -1,0 +1,13 @@
+img {
+	max-width: 200px;
+	height: 100px;
+}
+
+button {
+	background-color: transparent;
+	border: transparent;
+}
+
+button:hover {	
+	background-color: gray;
+}
