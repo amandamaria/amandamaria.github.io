@@ -14,7 +14,8 @@ var pusher = new Pusher({
   key: '540ddf4e71af1552e0c1',
   secret: 'f6fc583afed9be073d6d',
   cluster: 'us2',
-  encrypted: true
+  encrypted: true, 
+  authEndpoint: "/public/broadcasting/auth"
 });
 
 app.post('/pusher/auth', function(req, res) {
