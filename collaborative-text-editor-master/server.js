@@ -12,7 +12,8 @@ app.use(express.static('./'));
 var pusher = new Pusher({
   appId: '464075',
   key: '45cdb06d1fdcd1779e33',
-  secret:  '39a36e138073190f2359' 
+  secret:  '39a36e138073190f2359' ,
+  options: [ cluster: 'us2', encrypted : true ]
 });
 
 app.post('/pusher/auth', function(req, res) {
