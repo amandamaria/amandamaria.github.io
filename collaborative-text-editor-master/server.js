@@ -10,9 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('./'));
 
 var pusher = new Pusher({
-  appId: 'INSERT_YOUR_APP_ID_HERE',
-  key: 'INSERT_YOUR_KEY_HERE',
-  secret:  'INSERT_YOUR_SECRET_HERE' 
+  appId: '464075',
+  key: '45cdb06d1fdcd1779e33',
+  secret:  '39a36e138073190f2359' 
 });
 
 app.post('/pusher/auth', function(req, res) {
