@@ -1,0 +1,10 @@
+.obama-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    width: 100%;        
+}
+
+.transparent-form {
+	background: rgba(150, 150, 150, 0.3);
+}
