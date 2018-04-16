@@ -12,16 +12,18 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	
 </head>
 <body style="background-color:#424242" >
 	<div class="row">
 	</div>
 	<div class="row hide-on-med-and-down" style="position: fixed; right: 0px; top: 15px;">
 		<div class="" >
-			<a class="grey-text col pull-s2 " href="sass.html">O projeto</a>
-			<a class="grey-text col pull-s2" href="sass.html">Equipe</a>
-			<a class="grey-text col pull-s2" href="sass.html">Notícias</a>
-			<a class="waves-effect waves-light btn blue col pull-s2" href="collapsible.html">ACESSE</a>
+			<a class="blue-text col pull-s2 grey-text" href="index.html">Início</a>
+			<a class="blue-text col pull-s2 grey-text" href="sass.html">Equipe</a>
+			<a class="blue-text col pull-s2 grey-text" href="sass.html">Notícias</a>
+			<a class="blue-text col pull-s2 grey-text" href="sass.html">Sobre</a>
+			<a class="waves-effect waves-light btn blue col pull-s2" href="login.html">ACESSE</a>
 		</div>
 	</div>
 	<div class="row">
@@ -59,11 +61,15 @@
 		</div>	
 	</div>
 	<script type="text/javascript">
+		
 		$( document ).ready(function() {
 			$('.carousel').carousel({
 				padding: 100    
 			});
-			autoplay(); 
+			autoplay();
+			$('.sidenav').sidenav({
+				isFixed: true
+			});
 		});
 		  
 		function autoplay() {
