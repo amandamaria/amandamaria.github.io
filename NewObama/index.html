@@ -12,6 +12,11 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			 $('.dropdown-trigger').dropdown();
+		});
+	</script>
 </head>
 <body style="background-color:#424242" >
 	<div class="row">
@@ -21,15 +26,23 @@
 			<a class="grey-text col pull-s2 " href="sass.html">O projeto</a>
 			<a class="grey-text col pull-s2" href="sass.html">Equipe</a>
 			<a class="grey-text col pull-s2" href="sass.html">Notícias</a>
-			<a class="waves-effect waves-light btn blue col pull-s2" href="collapsible.html">ACESSE</a>
+			<a class="dropdown-trigger waves-effect waves-light btn blue col pull-s2" href="#" data-target='dropdown1' data-activates="dropdown1" data-hover="true">ACESSE</a>
 		</div>
+		 <ul id='dropdown1' class='dropdown-content'>
+			<li><a href="#!">one</a></li>
+			<li><a href="#!">two</a></li>
+			<li class="divider" tabindex="-1"></li>
+			<li><a href="#!">three</a></li>
+			<li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+			<li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+		  </ul>
 	</div>
 	<div class="row">
 	</div>
 	<div class="row">
 	</div>
 	<div class="row">
-		<div class="col s12 center" style="margin-top: 30px">
+		<div class="col s12 center" style="margin-top: 10px">
 			<img style="width: 30%;" src="logo-obama.png"/>		
 		</div>
 	</div>
