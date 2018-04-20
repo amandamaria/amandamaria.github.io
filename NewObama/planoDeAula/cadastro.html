@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<meta charset="utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	
+	<link rel="stylesheet" href="css.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	
+	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+
+
+  <!-- CodeMirror -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+
+
+  <!-- Firepad -->
+
+  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
+
+  <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+
+
+  <style rel="stylesheet">
+    #firepad-container {
+
+      width: 100%;
+
+      height: 400px;
+
+    }
+
+  </style>
+	
+</head>
+<body style="background-color:#424242" onload="init()" >
+	<div class="row">
+	</div>
+	<div class="row hide-on-med-and-down" style="position: fixed; right: 0px; top: 15px;">
+		<div class="" >
+			<a class="grey-text col pull-s2 " href="sass.html">O projeto</a>
+			<a class="grey-text col pull-s2" href="sass.html">Equipe</a>
+			<a class="grey-text col pull-s2" href="sass.html">Notícias</a>
+			<a href="#" data-target="slide-out" class="sidenav-trigger grey-text col pull-s2">Sair</a>
+		</div>
+	</div>
+	<!-- Dropdown Structure -->
+	<ul id="slide-out" class="sidenav sidenav-fixed transparent-menu">
+		<li>
+			<div class="user-view center">
+				<div class="background">
+					<img style="width: 100%" src="office.png">
+				</div>
+				
+				<div class="row">
+					<a href="#name"><span class="white-text name col s12">John Doe</span></a>
+					<a href="#email"><span class="white-text email col s12">jdandturk@gmail.com</span></a>
+					<div class="row">
+						<a href="#name" class="white-text email col s12 right"><i class="material-icons">settings</i></a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">OA<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>
+							<li><a href="#!">Novo</a></li>
+							<li><a href="#!">Gerenciar</a></li>
+							<li><a href="#!">Buscar</a></li>
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">Plano de aula<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>
+							<li><a href="#!">Novo</a></li>
+							<li><a href="#!">Meus planos de aula</a></li>
+							<li><a href="#!">Aguardando revisão</a></li>
+							<li><a href="#!">Buscar</a></li>
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">Usuários<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>							
+							<li><a href="#!">Gerenciar</a></li>							
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+	</ul>	
+	
+	<div class="row" style="margin-top: 55px;">
+		<form class="card-panel transparent-form offset-l2 offset-s1" style="width: 80%; height:660px; margin-left: 17%;">
+			<h3 class="col s12">Cadastro de plano de aula</h3>
+			<ul id="tabs-swipe-demo" class="tabs">
+				<li class="tab col s4"><a class="active" href="#test-swipe-1">Passo 1</a></li>
+				<li class="tab col s4"><a href="#test-swipe-2">Passo 2</a></li>
+				<li class="tab col s4"><a href="#test-swipe-3">Passo 3</a></li>
+			</ul>
+			<div id="test-swipe-1" class="col s12">
+				<div class="row">				
+					<div class="row"></div>
+					<div class="input-field col s11">
+						<input id="first_name" type="text">
+						<label for="first_name">Buscar</label>
+					</div>
+					<table class="col s5">
+						<thead>
+						  <tr>
+							  <th>Nome</th>
+							  <th></th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>Alvin</td>
+							<td>Eclair</td>
+						  </tr>
+						  <tr>
+							<td>Alan</td>
+							<td>Jellybean</td>
+						  </tr>
+						  <tr>
+							<td>Jonathan</td>
+							<td>$7.00</td>
+						  </tr>
+						</tbody>
+					</table>
+					<table class="col s5 offset-s1">						
+						<thead>
+						  <tr>
+							  <th>Nome</th>
+							  <th></th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td>Alvin</td>
+							<td>Eclair</td>
+						  </tr>
+						  <tr>
+							<td>Alan</td>
+							<td>Jellybean</td>
+						  </tr>
+						  <tr>
+							<td>Jonathan</td>
+							<td>$7.00</td>
+						  </tr>
+						</tbody>
+					</table>
+					<div class="row">
+						<div class="col s10 offset-s1">
+							<div class="right">
+								<a href="#" class="btn">Avançar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="test-swipe-2" class="col s12">
+				<div class="row">
+					<div class="row"></div>
+					<div class="input-field col s12">
+						<input id="first_name" type="text">
+						<label for="first_name">Título</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="first_name" type="text">
+						<label for="first_name">Instituição de ensino</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="first_name" type="text">
+						<label for="first_name">Ano de ensino</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="first_name" type="number">
+						<label for="first_name">Duração</label>
+					</div>
+					<div class="row">
+						<div class="col s10 offset-s1">
+							<div class="right">
+								<a href="#" class="btn">Avançar</a>
+							</div>
+							<div class="left">
+								<a href="#" class="btn">Voltar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="test-swipe-3" class="col s12">
+			<div id="firepad-container"></div>
+			</div>
+			<div class="row center">
+				<a href="#" class="btn"><i class="material-icons">save</i></a>
+				<a href="#" class="btn"><i class="material-icons">share</i></a>
+			</div>
+			
+		</form>
+	</div>
+	
+	<script type="text/javascript">
+		
+		$( document ).ready(function() {
+			$('.sidenav').sidenav({
+				isFixed: true
+			});
+			$('#firepad-container').click();
+			$('.tabs').tabs();
+			$('.collapsible').collapsible();
+		});
+	</script>
+	<script>
+
+    function init() {
+
+      //// Initialize Firebase.
+
+      //// TODO: replace with your Firebase project configuration.
+
+      var config = {
+
+        apiKey: "AIzaSyC_JdByNm-E1CAJUkePsr-YJZl7W77oL3g",
+
+        authDomain: "firepad-tests.firebaseapp.com",
+
+        databaseURL: "https://firepad-tests.firebaseio.com"
+
+      };
+
+      firebase.initializeApp(config);
+
+
+
+      //// Get Firebase Database reference.
+
+      var firepadRef = getExampleRef();
+
+
+
+      //// Create CodeMirror (with lineWrapping on).
+
+      var codeMirror = CodeMirror(document.getElementById('firepad-container'), { lineWrapping: true });
+
+
+
+      //// Create Firepad (with rich text toolbar and shortcuts enabled).
+
+      var firepad = Firepad.fromCodeMirror(firepadRef, codeMirror,
+
+          { richTextToolbar: true, richTextShortcuts: true });
+
+
+
+      //// Initialize contents.
+
+      firepad.on('ready', function() {
+
+        if (firepad.isHistoryEmpty()) {
+
+          firepad.setHtml(
+
+              '<span style="font-size: 24px;">Rich-text editing with <span style="color: red">Firepad!</span></span><br/>\n' +
+
+              '<br/>' +
+
+              '<div style="font-size: 18px">' +
+
+              'Supports:<br/>' +
+
+              '<ul>' +
+
+                '<li>Different ' +
+
+                  '<span style="font-family: impact">fonts,</span>' +
+
+                  '<span style="font-size: 24px;"> sizes, </span>' +
+
+                  '<span style="color: blue">and colors.</span>' +
+
+                '</li>' +
+
+                '<li>' +
+
+                  '<b>Bold, </b>' +
+
+                  '<i>italic, </i>' +
+
+                  '<u>and underline.</u>' +
+
+                '</li>' +
+
+                '<li>Lists' +
+
+                  '<ol>' +
+
+                    '<li>One</li>' +
+
+                    '<li>Two</li>' +
+
+                  '</ol>' +
+
+                '</li>' +
+
+                '<li>Undo / redo</li>' +
+
+                '<li>Cursor / selection synchronization.</li>' +
+
+                '<li><checkbox></checkbox> It supports customized entities.</li>' +
+
+                '<li>And it\'s all fully collaborative!</li>' +
+
+              '</ul>' +
+
+              '</div>');
+
+        }
+
+      });
+
+
+
+      // An example of a complex custom entity.
+
+      firepad.registerEntity('checkbox', {
+
+        render: function (info, entityHandler) {
+
+          var inputElement = document.createElement('input');
+
+          inputElement.setAttribute('type', 'checkbox');
+
+          if(info.checked) {
+
+            inputElement.checked = 'checked';
+
+          }
+
+          inputElement.addEventListener('click', function () {
+
+            entityHandler.replace({checked:this.checked});
+
+          });
+
+          return inputElement;
+
+        }.bind(this),
+
+        fromElement: function (element) {
+
+          var info = {};
+
+          if(element.hasAttribute('checked')) {
+
+            info.checked = true;
+
+          }
+
+          return info;
+
+        },
+
+        update: function (info, element) {
+
+          if (info.checked) {
+
+            element.checked = 'checked';
+
+          } else {
+
+            element.checked = null;
+
+          }
+
+        },
+
+        export: function (info) {
+
+          var inputElement = document.createElement('checkbox');
+
+          if(info.checked) {
+
+            inputElement.setAttribute('checked', true);
+
+          }
+
+          return inputElement;
+
+        }
+
+      });
+
+    }
+
+
+
+    // Helper to get hash from end of URL or generate a random one.
+
+    function getExampleRef() {
+
+      var ref = firebase.database().ref();
+
+      var hash = window.location.hash.replace(/#/g, '');
+
+      if (hash) {
+
+        ref = ref.child(hash);
+
+      } else {
+
+        ref = ref.push(); // generate unique location.
+
+        window.location = window.location + '#' + ref.key; // add it as a hash to the URL.
+
+      }
+
+      if (typeof console !== 'undefined') {
+
+        console.log('Firebase data: ', ref.toString());
+
+      }
+
+      return ref;
+
+    }
+
+  </script>
+</body>
+<footer>
+	<div class="row obama-footer" > 
+		<div class="col s12">
+			<a class="grey-text col s6" href="sass.html">Objetos de Aprendizagem para Matemática (OBAMA) - 2017 (CC)</a>
+			<a class="grey-text col s1 offset-s2" href="sass.html">Suporte</a>
+			<a class="grey-text col s1" href="sass.html">FreePik</a>	
+			<a class="grey-text col s2" href="sass.html">Creative Commons 2.0</a>	
+		</div>
+	</div>
+</footer>
+</html>

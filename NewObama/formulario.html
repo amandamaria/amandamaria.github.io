@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<meta charset="utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	
+	<link rel="stylesheet" href="css.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	
+</head>
+<body style="background-color:#424242" >
+	<div class="row">
+	</div>
+	<div class="row hide-on-med-and-down" style="position: fixed; right: 0px; top: 15px;">
+		<div class="" >
+			<a class="grey-text col pull-s2 " href="sass.html">O projeto</a>
+			<a class="grey-text col pull-s2" href="sass.html">Equipe</a>
+			<a class="grey-text col pull-s2" href="sass.html">Notícias</a>
+			<a href="#" data-target="slide-out" class="sidenav-trigger grey-text col pull-s2"><i class="material-icons">menu</i></a>
+		</div>
+	</div>
+	<!-- Dropdown Structure -->
+	<ul id="slide-out" class="sidenav sidenav-fixed transparent-menu">
+		<li>
+			<div class="user-view center">
+				<div class="background">
+					<img style="width: 100%" src="office.png">
+				</div>
+				
+				<div class="row">
+					<a href="#name"><span class="white-text name col s12">John Doe</span></a>
+					<a href="#email"><span class="white-text email col s12">jdandturk@gmail.com</span></a>
+					<div class="row">
+						<a href="#name" class="white-text email col s12 right"><i class="material-icons">settings</i></a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">OA<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>
+							<li><a href="#!">Novo</a></li>
+							<li><a href="#!">Gerenciar</a></li>
+							<li><a href="#!">Buscar</a></li>
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">Plano de aula<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>
+							<li><a href="#!">Novo</a></li>
+							<li><a href="#!">Meus planos de aula</a></li>
+							<li><a href="#!">Aguardando revisão</a></li>
+							<li><a href="#!">Buscar</a></li>
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">Usuários<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>							
+							<li><a href="#!">Gerenciar</a></li>							
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+	</ul>	
+	<script type="text/javascript">
+		
+		$( document ).ready(function() {
+			$('.sidenav').sidenav({
+				isFixed: true
+			});
+			$('.collapsible').collapsible();
+		});
+	</script>
+</body>
+<footer>
+	<div class="row obama-footer" > 
+		<div class="col s12">
+			<a class="grey-text col s6" href="sass.html">Objetos de Aprendizagem para Matemática (OBAMA) - 2017 (CC)</a>
+			<a class="grey-text col s1 offset-s2" href="sass.html">Suporte</a>
+			<a class="grey-text col s1" href="sass.html">FreePik</a>	
+			<a class="grey-text col s2" href="sass.html">Creative Commons 2.0</a>	
+		</div>
+	</div>
+</footer>
+</html>

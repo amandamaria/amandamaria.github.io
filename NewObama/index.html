@@ -23,10 +23,11 @@
 	</div>
 	<div class="row hide-on-med-and-down" style="position: fixed; right: 0px; top: 15px;">
 		<div class="" >
-			<a class="grey-text col pull-s2 " href="sass.html">O projeto</a>
-			<a class="grey-text col pull-s2" href="sass.html">Equipe</a>
-			<a class="grey-text col pull-s2" href="sass.html">Notícias</a>
-			<a class="dropdown-trigger waves-effect waves-light btn blue col pull-s2" href="#" data-target='dropdown1' data-activates="dropdown1" data-hover="true">ACESSE</a>
+			<a class="blue-text col pull-s2 grey-text" href="index.html">Início</a>
+			<a class="blue-text col pull-s2 grey-text" href="sass.html">Equipe</a>
+			<a class="blue-text col pull-s2 grey-text" href="sass.html">Notícias</a>
+			<a class="blue-text col pull-s2 grey-text" href="sass.html">Sobre</a>
+			<a class="waves-effect waves-light btn blue col pull-s2" href="login.html">ACESSE</a>
 		</div>
 		 <ul id='dropdown1' class='dropdown-content'>
 			<li><a href="#!">one</a></li>
@@ -72,11 +73,15 @@
 		</div>	
 	</div>
 	<script type="text/javascript">
+		
 		$( document ).ready(function() {
 			$('.carousel').carousel({
 				padding: 100    
 			});
-			autoplay(); 
+			autoplay();
+			$('.sidenav').sidenav({
+				isFixed: true
+			});
 		});
 		  
 		function autoplay() {
