@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head >
+	<meta charset="utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	
+	<link rel="stylesheet" href="css.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	
+	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+
+
+  <!-- CodeMirror -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+
+
+  <!-- Firepad -->
+
+  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
+
+  <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+
+
+  <style rel="stylesheet">
+    #firepad-container {
+
+      width: 100%;
+
+      height: 400px;
+
+    }
+	
+	.btn-flat {
+		margin-right: 0px !important;
+	}
+	
+	.card-action {
+	    padding-right: 5px !important;
+		padding-left: 5px !important;
+	}
+  </style>
+	
+</head>
+<body style="background-color:#424242">
+	<div class="row">
+	</div>
+	<div class="row hide-on-med-and-down" style="position: fixed; right: 0px; top: 15px;">
+		<div class="" >
+			<a class="grey-text col pull-s2 " href="sass.html">O projeto</a>
+			<a class="grey-text col pull-s2" href="sass.html">Equipe</a>
+			<a class="grey-text col pull-s2" href="sass.html">Notícias</a>
+			<a href="#" data-target="slide-out" class="sidenav-trigger grey-text col pull-s2">Sair</a>
+		</div>
+	</div>
+	<!-- Dropdown Structure -->
+	<ul id="slide-out" class="sidenav sidenav-fixed transparent-menu">
+		<li>
+			<div class="user-view center">
+				<div class="background">
+					<img style="width: 100%" src="office.png">
+				</div>
+				
+				<div class="row">
+					<a href="#name"><span class="white-text name col s12">John Doe</span></a>
+					<a href="#email"><span class="white-text email col s12">jdandturk@gmail.com</span></a>
+					<div class="row">
+						<a href="#name" class="white-text email col s12 right"><i class="material-icons">settings</i></a>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">OA<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>
+							<li><a href="#!">Novo</a></li>
+							<li><a href="#!">Gerenciar</a></li>
+							<li><a href="#!">Buscar</a></li>
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">Plano de aula<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>
+							<li><a href="#!">Novo</a></li>
+							<li><a href="#!">Meus planos de aula</a></li>
+							<li><a href="#!">Aguardando revisão</a></li>
+							<li><a href="#!">Buscar</a></li>
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">Usuários<i class="material-icons">arrow_drop_down</i></a>
+					<div class="collapsible-body">
+						<ul>							
+							<li><a href="#!">Gerenciar</a></li>							
+						</ul>
+				</div>
+			  </li>
+			</ul>
+		</li>
+	</ul>	
+	
+	<div class="row" style="margin-top: 55px;">
+		<form class="card-panel transparent-form offset-l2 offset-s1" style="width: 80%; height:450px; margin-left: 17%;">
+			<h3 class="col s12">Objetos de aprendizagem</h3>			
+			<div class="col s12">		
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="busca-texto" type="text">
+						<label for="busca-texto">Digite aqui para pesquisar</label>
+					</div>
+					<div class="input-field col s12 l4 m4">
+						<input id="nivel" type="text">
+						<label for="nivel">Nível de ensino</label>
+					</div>
+					<div class="input-field col s12 l4 m4">
+						<input id="ano" type="text">
+						<label for="ano">Tema curricular</label>
+					</div>
+					<div class="input-field col s12 l4 m4">
+						<input id="visualizacao" type="text">
+						<label for="visualizacao">Tipo de visualização</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="duracao" type="number">
+						<label for="duracao">Duração</label>
+					</div>
+					<div class="col s12">					
+						<div class="center">
+							<a href="#" class="btn grey darken-3">Buscar</a>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</form>
+		<div class="offset-l2 offset-s1" style="width: 80%; height:660px; margin-left: 17%;">
+			<div id="container-oa" class="row">
+				<div class="col s12 m3">
+				  <div class="card">
+					<div class="card-image">
+					  <img src="sample.jpg">
+					  <span class="card-title">Nome do OA</span>
+					</div>
+					<div class="card-content">
+					  <p>Ensino Médio
+					  </p>
+					  <p>Educação Infantil
+					  </p>
+					</div>
+					<div class="card-action">
+						<div class="center">
+						  <a class="waves-effect btn-flat"><i class="material-icons grey-text">remove_red_eye</i></a>
+						  <a class="waves-effect btn-flat"><i class="material-icons grey-text">info</i></a>
+						  <a class="waves-effect btn-flat"><i class="material-icons grey-text">share</i></a>					  
+						  <a class="waves-effect btn-flat"><i class="material-icons grey-text">note_add</i></a>
+						</div>
+					</div>
+				  </div>
+				</div>
+			 </div>
+		</div>
+	</div>
+	
+	
+	
+	<script type="text/javascript">
+		
+		$( document ).ready(function() {
+			$('.sidenav').sidenav({
+				isFixed: true
+			});
+			$('#firepad-container').click();
+			$('.tabs').tabs();
+			$('.collapsible').collapsible();
+			carregarOA();
+		});
+		
+		function carregarOA() {
+			var container_OA = document.getElementById('container-oa');
+			var str_lista_oa = "";
+			for (var i=0; i< 12; i++) {
+				str_lista_oa = str_lista_oa.concat("<div class='col s12 m3'>"+
+				  "<div class='card'>"+
+					"<div class='card-image'>"+
+					  "<img src='sample.jpg'>"+
+					  "<span class='card-title'>Nome do OA</span>"+
+					"</div>"+
+					"<div class='card-content'>"+
+					  "<p>Ensino Médio"+
+					  "</p>"+
+					  "<p>Educação Infantil"+
+					  "</p>"+
+					"</div>"+
+					"<div class='card-action'>"+
+						"<div class='center'>"+
+						  "<a class='waves-effect btn-flat'><i class='material-icons grey-text'>remove_red_eye</i></a>"+
+						  "<a class='waves-effect btn-flat'><i class='material-icons grey-text'>info</i></a>"+
+						  "<a class='waves-effect btn-flat'><i class='material-icons grey-text'>share</i></a>"+					  
+						  "<a class='waves-effect btn-flat'><i class='material-icons grey-text'>note_add</i></a>"+
+						"</div>"+
+					"</div>"+
+				  "</div>"+
+				"</div>");
+			}
+			container_OA.innerHTML = str_lista_oa;
+		}
+		
+	</script>
+	
+</body>
+<footer>
+	<div class="row obama-intern-footer" > 
+		<div class="col s12">
+			<a class="grey-text col s6" href="sass.html">Objetos de Aprendizagem para Matemática (OBAMA) - 2017 (CC)</a>
+			<a class="grey-text col s1 offset-s2" href="sass.html">Suporte</a>
+			<a class="grey-text col s1" href="sass.html">FreePik</a>	
+			<a class="grey-text col s2" href="sass.html">Creative Commons 2.0</a>	
+		</div>
+	</div>
+</footer>
+</html>
