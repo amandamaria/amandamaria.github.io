@@ -11,6 +11,14 @@ body {
 	z-index: 4000;
 }
 
+.obama-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+	background-color: transparent;
+}
+
 .transparent-form {
 	background: rgba(150, 150, 150, 0.2);
 }
