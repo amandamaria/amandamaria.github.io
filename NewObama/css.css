@@ -35,3 +35,13 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+#circle {
+  width:150px;
+  height:150px;
+  border:6px solid rgba(190, 190, 190, 0.3);
+  border-radius:100%;
+  background:url(amanda-3.jpg) center no-repeat; 
+  background-size: 150px 150px;
+}
+
