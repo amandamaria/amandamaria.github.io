@@ -38,12 +38,14 @@ body {
 
 .container-foto-inicio {
 	max-width: 200px;
+	height: 210px;
 }
 
 .container-foto {
 	max-width: 200px;
 	margin-left: 10px !important;
 	margin-right: 10px;
+	height: 210px;
 }
 
 #circle {
