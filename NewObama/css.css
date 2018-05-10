@@ -36,12 +36,25 @@ body {
     margin-bottom: 5px;
 }
 
+.container-foto-inicio {
+	max-width: 200px;
+	height: 210px;
+}
+
+.container-foto {
+	max-width: 200px;
+	margin-left: 10px !important;
+	margin-right: 10px;
+	height: 210px;
+}
+
 #circle {
   width:150px;
   height:150px;
   border:6px solid rgba(190, 190, 190, 0.3);
   border-radius:100%;
-  background:url(amanda-3.jpg) center no-repeat; 
+  background:url(amanda-3.jpg) center no-repeat;  
   background-size: 150px 150px;
+  alignment="center";
 }
 
