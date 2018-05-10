@@ -1,0 +1,13 @@
+/*paleta de cores http://colorhunt.co/c/116289*/
+
+body {
+	background-color: #ECF0F1;
+}
+
+nav {
+	background-color: #2980B9;
+}
+
+.btn-submit, .btn-submit:hover {
+	background-color: #2C3E50 !important;
+}
