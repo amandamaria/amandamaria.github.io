@@ -1,11 +1,14 @@
-/*paleta de cores http://colorhunt.co/c/116289*/
-
 body {
-	background-color: #ECF0F1;
+	background-image: url('../background.jpeg');
+	background-repeat: repeat;
 }
 
 nav {
-	background-color: #2980B9;
+	background: linear-gradient(to bottom right, #2C3E50, #ECF0F1);
+}
+
+.card-panel {
+	background: rgba(150, 150, 150, 0.2) !important;
 }
 
 .btn-submit, .btn-submit:hover {
