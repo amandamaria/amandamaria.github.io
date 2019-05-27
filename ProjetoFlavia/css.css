@@ -1,0 +1,30 @@
+/*roxo = b31e6f; azul = 373a6d; cinza = f5fbf1*/
+
+body {
+	background-color: #f5fbf1;
+}
+
+nav .nav-wrapper {
+	background-color: #b31e6f;
+}
+
+.btn {
+	background-color: #373a6d;
+}
+
+nav ul a{
+	padding-right: 50px;
+}
+
+nav .brand-logo {
+	padding-left: 50px;
+}
+
+[type="radio"]:checked+span:after {
+    background-color: #373a6d;
+    border-color: #373a6d;
+}
+
+[type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after {
+    border: 2px solid #b31e6f;
+}
