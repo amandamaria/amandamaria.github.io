@@ -2,7 +2,7 @@
 
 function gerarRelatorio() {
 	var respostas = [];
-	for(
+	//for(
 }
 
 function is_checked(e) {

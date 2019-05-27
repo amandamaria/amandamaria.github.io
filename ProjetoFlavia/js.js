@@ -10,7 +10,7 @@ var perguntasFase1 = {"objetivas":[
 	{"enunciado":"Para e retorna a uma nova informação quando ela não está clara?"},
 	{"enunciado":"Antecipa as implicações do problema?"},
 	{"enunciado":"Seleciona as estratégias pertinentes de execução?"},
-	{"enunciado","Planeja as estratégias selecionadas?"},
+	{"enunciado":"Planeja as estratégias selecionadas?"},
 	{"enunciado":"Utiliza conhecimentos extraescolares no planejamento de suas ações?"},
 	{"enunciado":"Demonstra autoconfiança para iniciar a tarefa?"},
 ], 
@@ -24,9 +24,9 @@ var perguntasFase1 = {"objetivas":[
 	{"enunciado":"O aluno anima-se com a tarefa ou verbaliza que a mesma é fácil ou que já fez atividade parecida ou que sabe fazer?"},
 ]};
 
-var alternativasABC = { "alternativa":"Não demonstra esse comportamento",
-"alternativa":"Demonstra esse comportamento com mediação",
-"alternativa":"Demonstra esse comportamento espontaneamente, sem mediação"
+var alternativasABC = { "alternativas":[ {"alternativa":"Não demonstra esse comportamento"},
+	{"alternativa":"Demonstra esse comportamento com mediação"},
+	{"alternativa":"Demonstra esse comportamento espontaneamente, sem mediação"}]
 };
 
 function exibirPerguntasFase1() {
@@ -34,18 +34,18 @@ function exibirPerguntasFase1() {
 	for(var i=0; i< perguntasFase1.objetivas.length; i++) {
 		var pEnunciado = document.createElement('p');
 		var enunciadoText = document.createTextNode(perguntasFase1.objetivas[i].enunciado); 
-		pEnunciado.appendChild(node);
+		pEnunciado.appendChild(enunciadoText);
 		divPerguntas.appendChild(pEnunciado);
-		for(var j=0; j<alternativasABC.length; j++) {			
+		for(var j=0; j<alternativasABC.alternativas.length; j++) {			
 			var p = document.createElement('p');
 			var label = document.createElement('label');
 			var input = document.createElement('input');
 			input.type = "radio";
 			input.name = "pergunta"+(i+1);
 			input.classList.add("whit-gap");
-			input.value = alternativasABC.alternativa;
+			input.value = alternativasABC.alternativas[j].alternativa;
 			var span = document.createElement('span');
-			var alternativaText = document.createTextNode(alternativasABC.alternativa); 
+			var alternativaText = document.createTextNode(alternativasABC.alternativas[j].alternativa); 
 			span.appendChild(alternativaText);
 			
 			label.appendChild(input);
@@ -55,3 +55,7 @@ function exibirPerguntasFase1() {
 		}
 	}
 }
+
+$(document).ready(function() {
+	exibirPerguntasFase1();
+});
