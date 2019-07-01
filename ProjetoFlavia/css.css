@@ -50,3 +50,7 @@ nav .brand-logo {
 a.btn:hover, input.btn:hover {
 	background-color: gray;
 }
+
+.page-footer {
+	background-color: #373a6d;
+}
