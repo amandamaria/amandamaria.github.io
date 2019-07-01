@@ -28,3 +28,25 @@ nav .brand-logo {
 [type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after {
     border: 2px solid #b31e6f;
 }
+
+.tabs .indicator {
+	background-color: #373a6d;
+}
+
+.tabs .tab a {
+	color: #b31e6f;
+}
+
+.tabs .tab a:hover  {
+	background-color: #373a6d44;
+	color: #373a6d;
+}
+
+.tabs .tab a.active {
+	background-color: white;
+	color: #373a6d;
+}
+
+a.btn:hover, input.btn:hover {
+	background-color: gray;
+}
