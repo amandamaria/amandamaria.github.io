@@ -16,24 +16,29 @@
 		<script src="js.js" type="text/javascript"></script>
 		<script src="resultado.js" type="text/javascript"></script>		
 		<script src="menu_footer.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script> 
+		<script src="pdf.js"></script>
 	</head>
 	<body>
 		<div id="menu"></div>
 		<div class="row">
 			<div class="col s10 offset-s1 l8 offset-l2 card">
-				<div class="center">
-					<h5>RELATÓRIO</h5>
-				</div>		
-				<div id="dadosAluno">
-					<h5>INFORMAÇÕES GERAIS</h5>
-				</div>				
-				<div id="resultado" style="min-height: 250px;">
-					<h5>RESULTADO</h5>
+				<div id="conteudo-relatorio">
+					<div class="center">
+						<h5>RELATÓRIO</h5>
+					</div>		
+					<div id="dadosAluno">
+						<h5>INFORMAÇÕES GERAIS</h5>
+					</div>				
+					<div id="resultado" style="min-height: 250px;">
+						<h5>RESULTADO</h5>
+					</div>
 				</div>
 				<div class="row">
 					<div class="center">
 						<button class="btn" onclick="voltarParaFormulario();">Voltar</button>
 						<a class="btn pink" href="index.html">Novo</a>
+						<button class="btn" onclick="createPDF();">Imprimir</button>
 					</div>
 				</div>
 			</div>
