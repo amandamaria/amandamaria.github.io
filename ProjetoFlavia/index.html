@@ -21,52 +21,59 @@
 	<body>
 		<div id="menu"></div>		
 		<div class="row">
-			<div class="col s10 offset-s1 l8 offset-l2 card">
-				<ul id="tabs-swipe-demo" class="tabs">
-					<li class="tab col s3"><a class="tab-selector" class="active" href="#tab-fase1">Fase 1</a></li>
-					<li class="tab col s3"><a class="tab-selector" href="#tab-fase2">Fase 2</a></li>
-					<li class="tab col s3"><a class="tab-selector" href="#tab-fase3">Fase 3</a></li>
-				</ul>
-				<div id="tab-fase1" class="col s12">
-					<p><b>FASE INTENCIONAL</b> - Fase inicial de interação com o jogo e/ou atividade. 
-					Fase de ouvir e compreender os comandos para planejar a execução da tarefa.</p>
-					<form action="resultado.html" method="get" onsubmit="gerarRelatorioFase1()">
-						<div id="perguntasFase-1"></div>
-						<input type="hidden" name="paramFase" value="fase1">
+			<form action="resultado.html" method="get" onsubmit="gerarRelatorioFase1()">
+				<div class="col s10 offset-s1 l8 offset-l2 card">
+					<ul id="tabs-swipe-demo" class="tabs">
+						<li class="tab col s3"><a class="tab-selector" class="active" href="#tab-dados-aluno">Dados do aluno</a></li>
+						<li class="tab col s3"><a class="tab-selector" class="active" href="#tab-fase1">Fase 1</a></li>
+						<li class="tab col s3"><a class="tab-selector" href="#tab-fase2">Fase 2</a></li>
+						<li class="tab col s3"><a class="tab-selector" href="#tab-fase3">Fase 3</a></li>
+					</ul>
+					<div id="tab-dados-aluno" class="col s12">
+						<p><b>DADOS DO ALUNO</b></p>	
 						<div class="row">
-							<div class="center">
-								<input class="btn" type="submit" value="Gerar relatório">
+							<div class="input-field col s12">
+							  <input placeholder="Atividade realizada" id="nome-atividade" name="nomeAtividade" type="text" class="validate">
+							  <label for="nome-atividade">Atividade realizada</label>
 							</div>
-						</div>
-					</form>
-				</div>
-				<div id="tab-fase2" class="col s12">
-					<p><b>FASE EXECUTIVA</b> - Fase de executar o planejamento para realizar a ação.</p>
-					<form action="resultado.html" method="get" onsubmit="gerarRelatorioFase2()">
+							<div class="input-field col s6">
+							  <input placeholder="Nome completo do aluno" id="nome-aluno" name="nomeAluno" type="text" class="validate">
+							  <label for="nome-aluno">Nome do aluno</label>
+							</div>
+							<div class="input-field col s6">
+							  <input placeholder="Click e selecione" id="data-nascimento" name="dataNascimento" type="text" class="datepicker">
+							  <label for="data-nascimento">Data de nascimento</label>
+							</div>
+							<div class="input-field col s12">
+							  <input placeholder="Diagnóstico" id="diagnostico" name="diagnostico" type="text" class="validate">
+							  <label for="nome-atividade">Descrição do diagnóstico do aluno</label>
+							</div>
+						</div>						
+					</div>
+					<div id="tab-fase1" class="col s12">
+						<p><b>FASE INTENCIONAL</b> - Fase inicial de interação com o jogo e/ou atividade. 
+						Fase de ouvir e compreender os comandos para planejar a execução da tarefa.</p>
+						<div id="perguntasFase-1"></div>												
+					</div>
+					<div id="tab-fase2" class="col s12">
+						<p><b>FASE EXECUTIVA</b> - Fase de executar o planejamento para realizar a ação.</p>						
 						<div id="perguntasFase-2"></div>
-						<input type="hidden" name="paramFase" value="fase2">
-						<div class="row">
-							<div class="center">
-								<input class="btn" type="submit" value="Gerar relatório">
-							</div>
-						</div>
-					</form>
-				</div>
-				<div id="tab-fase3" class="col s12">
-					<p><b>FASE DE AUTORREGULAÇÃO (AUTOAVALIAÇÃO)</b> - Fase final de autoavaliar a execução, logrando ou não êxito. 
-					Nessa fase o aluno autorregula-se nas duas tentativas; A segunda tentativa ocorre caso o aluno não obtenha êxito.</p>
-					<form action="resultado.html" method="get" onsubmit="gerarRelatorioFase3()">
+					</div>
+					<div id="tab-fase3" class="col s12">
+						<p><b>FASE DE AUTORREGULAÇÃO (AUTOAVALIAÇÃO)</b> - Fase final de autoavaliar a execução, logrando ou não êxito. 
+						Nessa fase o aluno autorregula-se nas duas tentativas; A segunda tentativa ocorre caso o aluno não obtenha êxito.</p>
 						<div id="perguntasFase-3"></div>
-						<input type="hidden" name="paramFase" value="fase3">
 						<div class="row">
 							<div class="center">
 								<input class="btn" type="submit" value="Gerar relatório">
 							</div>
-						</div>
-					</form>
-				</div>				
-			</div>
-			<input type="hidden" name="div-fase" id="div-fase">
+						</div>						
+					</div>	
+										
+				</div>
+				
+			</form>
+			
 			<div class="row"></div>						
 		</div>			
 	</body>

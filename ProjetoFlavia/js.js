@@ -44,6 +44,31 @@ var perguntasFase2 = {"objetivas":[
 	{"enunciado":"Se o aluno não realiza a tarefa de forma autônoma, como se deu a mediação?"},
 ]};
 
+var perguntasFase3 = {"objetivas":[
+	{"enunciado":"Consegue controlar a atenção e resistir à distração?"},
+	{"enunciado":"Sabe explicitar o que fez antes, durante e depois da tarefa?"},
+	{"enunciado":"Explicita suas ações na tarefa de modo descritivo?"},
+	{"enunciado":"Explicita suas ações na tarefa de modo avaliativo?"},
+	{"enunciado":"Avalia o processo de resolução do problema?"},
+	{"enunciado":"Identifica dificuldades e facilidades na realização das tarefas?"},
+	{"enunciado":"Revê o seu plano (autorreflexão)?"},
+	{"enunciado":"Utiliza os resultados adquiridos na autoavaliação da tarefa para ajustar ações às necessidades detectadas?"},
+	{"enunciado":"Consegue fazer a transferência e aplicação da aprendizagem para outros contextos?"},
+	{"enunciado":"É capaz de utilizar a mesma estratégia, com a qual obteve êxito, em diferentes contextos?"}
+], 
+"discursivas":[
+	{"enunciado":"O aluno avalia a tarefa antes de concluir?"},
+	{"enunciado":"Descreva suas explicitações."},
+	{"enunciado":"Como o aluno descreve?"},
+	{"enunciado":"Como o aluno avalia suas ações na tarefa?"},
+	{"enunciado":"Compara o resultado com seu planejamento?"},
+	{"enunciado":"Quais as dificuldades listadas pelo aluno? Quais as facilidades?"},
+	{"enunciado":"De que forma o aluno revê o plano elaborado para a resolução da tarefa na fase intencional?"},
+	{"enunciado":"Explicite"},
+	{"enunciado":"Como ocorre essa transferência?"},
+	{"enunciado":"Qual estratégia utiliza e em que contexto?"}
+]};
+
 var alternativasABC = { "alternativas":[ {"alternativa":"Não demonstra esse comportamento", "pontuacao": 0},
 	{"alternativa":"Demonstra esse comportamento com mediação", "pontuacao": 1},
 	{"alternativa":"Demonstra esse comportamento espontaneamente, sem mediação", "pontuacao": 2}]

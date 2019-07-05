@@ -47,10 +47,32 @@ nav .brand-logo {
 	color: #373a6d;
 }
 
-a.btn:hover, input.btn:hover {
+a.btn:hover, input.btn:hover, button.btn:hover {
 	background-color: gray;
 }
 
 .page-footer {
 	background-color: #373a6d;
+}
+
+.datepicker-date-display {
+	background-color: #373a6d;
+}
+
+cancel, .datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+    color: #b31e6f;
+    padding: 0 1rem;
+}
+
+.input-field > label {
+	color: #b31e6f;
+}
+
+.input-field input[type=text]:focus + label {
+     color: #373a6d !important;
+}
+
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #373a6d !important;
+ box-shadow: 0 1px 0 0 #373a6d !important;
 }
