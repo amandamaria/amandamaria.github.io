@@ -1,0 +1,35 @@
+import java.lang.Math;
+class MainTeste{
+	public static void main(String[] args) {		
+		int[] pot = new int[6];		
+		int max = 0;
+		
+		for (int i = 0; i < pot.length; i++){
+			pot[i] = (int)Math.pow(2,i);
+		}		
+		
+		max = pot[pot.length-1] * 2 -1;
+		
+		int[][] cartelas = new int[max+1][pot.length];		
+			
+		for (int i = 1, linha = 0; i <= max; i++){
+			int valor = i;
+			for (int j = pot.length-1; j >= 0; j--){
+				if((valor - pot[j]) >= 0) {
+					cartelas[linha][j] = i;
+					valor = valor - pot[j];
+				} else {
+					cartelas[linha][j] = -1;
+				}				
+			}			
+			linha = linha +1;
+		}
+		
+		for (int i = 0; i < max; i++){
+			for (int j = 0; j < pot.length; j++){
+				System.out.println(cartelas[i][j]);
+			}
+		}
+				
+	}
+}
