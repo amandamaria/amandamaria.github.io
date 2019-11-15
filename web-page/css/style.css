@@ -1307,3 +1307,13 @@ input[type="text"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/*Correções para acessibilidade*/
+.white-link, .white-link:hover,  .white-link:focus{
+	color: white;
+}
+
+.black-link, .black-link:hover, .black-link:focus {
+    color: black;
+	background: #e6e6e6
+}
