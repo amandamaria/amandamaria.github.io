@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Atelie4",
+"productVersion": "0.1",
+"dataUrl": "Recurso.data.unityweb",
+"wasmCodeUrl": "Recurso.wasm.code.unityweb",
+"wasmFrameworkUrl": "Recurso.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.1.9f1"
+}
