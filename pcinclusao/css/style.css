@@ -32,7 +32,13 @@ a {
     text-decoration: none !important; }
 
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em; 
+  font-size: 18px;
+}
+
+p span {
+  font-size: 13px;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
