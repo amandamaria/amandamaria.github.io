@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="pt-br">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,8 +20,8 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory 
+	<link rel="shortcut icon" href="favicon.ico">-->
 
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
@@ -42,6 +42,8 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="stylesheet" href="css/contrast.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -49,35 +51,37 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<script src="js/contrast.js"></script>
 
 	</head>
 	<body>
 	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<div class="container-wrap">		
 		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 			<div class="text-center">
 				<!--<div class="author-img" style="background-image: url(images/about.jpg);"></div>-->
-				<h1 id="colorlib-logo"><a href="index.html">PC e Inclusão</a></h1>
-				<span class="position"><a href="#">Por uma abordagem inclusiva para <br/>o desenvolvimento de Pensamento Computacional</a></span>
+				<h1 id="colorlib-logo"><a href="#colorlib-hero">PC e Inclusão</a></h1>
+				<span class="position">Por uma abordagem inclusiva para <br/>o desenvolvimento do Pensamento Computacional</span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				
 				<div id="navbar" class="collapse">
+					
 					<ul>
+						<li><a href="#" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()" title="Alto contraste [Alt + 3]"><div class="material-icons">invert_colors</div></a></li>
 						<li class="active"><a href="#" data-nav-section="home">Início</a></li>
-						<li><a href="#" data-nav-section="about">A proposta</a></li>
-						<li><a href="#" data-nav-section="services">Material</a></li>						
-						<li><a href="#" data-nav-section="education">A equipe</a></li>																		
-						<li><a href="#" data-nav-section="blog">Referências</a></li>
-						<li><a href="#" data-nav-section="contact">Contato</a></li>
+						<li><a href="#about" data-nav-section="about">A proposta</a></li>
+						<li><a href="#services" data-nav-section="services">Material</a></li>						
+						<li><a href="#education" data-nav-section="education">A equipe</a></li>																		
+						<li><a href="#blog" data-nav-section="blog">Referências</a></li>
+						<li><a href="#contact" data-nav-section="contact">Contato</a></li>
 					</ul>
 				</div>
 			</nav>
 
 			<div class="colorlib-footer">
 				<p>
-				<span> Template feito 
-				<i class="icon-heart" aria-hidden="true"></i> por 
+				<span> Template feito por 
 				<a href="https://colorlib.com" target="_blank">Colorlib</a> </span>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span>
 <span> Adaptado por <a href="http://lattes.cnpq.br/3279011855900079" target="_blank">Amanda Maria <script>document.write(new Date().getFullYear());</script></a></span>
@@ -105,10 +109,10 @@
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner js-fullheight">
 					   					<div class="desc">
-						   					<h1>Pensamento Computacional &<br/>Inclusão</h1>
-						   					<h2 style="font-size: 28px;">por uma educação em computação mais inclusiva</h2>
-												<p><a href="webfolio.pdf" target="_blank" class="btn btn-primary btn-learn" >Participe</a></p>
-											</div>
+						   					<div class="titulo-principal">Pensamento Computacional &<br/>Inclusão</div>
+						   					<h2 class="image-title" >Por uma abordagem inclusiva para o desenvolvimento do Pensamento Computacional</h2>
+											<p><a href="https://bit.ly/pcinclusao" target="_blank" class="btn btn-primary btn-learn" >Participe</a></p>
+										</div>
 					   				</div>
 					   			</div>
 					   		</div>
@@ -121,10 +125,10 @@
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
-						   					<h1>Pensamento Computacional &<br/>Inclusão</h1>
-						   					<h2 style="font-size: 28px;">por uma educação em computação mais inclusiva</h2>
-												<p><a href="webfolio.pdf" target="_blank" class="btn btn-primary btn-learn" >Participe</a></p>
-											</div>
+						   					<div>Pensamento Computacional &<br/>Inclusão</div>
+						   					<h2 class="image-title" >Por uma abordagem inclusiva para o desenvolvimento do Pensamento Computacional</h2>
+											<p><a href="https://bit.ly/pcinclusao" target="_blank" class="btn btn-primary btn-learn" >Participe</a></p>
+										</div>
 					   				</div>
 					   			</div>
 					   		</div>
@@ -134,7 +138,7 @@
 			  	</div>
 			</section>
 
-			<section class="colorlib-about" data-section="about">
+			<section id="about" class="colorlib-about" data-section="about">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-12">
@@ -145,7 +149,7 @@
 										<h2 class="colorlib-heading">O que é o Pensamento Computacional Inclusivo?</h2>
 										<p>Este espaço é destinado a compartilhar nossas ações em prol da promoção de práticas educativas na perspectiva da educação inclusiva que auxiliem no desenvolvimento do Pensamento Computacional.<br/>
 										E você que é pai, mãe, responsável ou professor e que tem interesse em conhecer atividades que podem auxiliar seu filho no desenvolvimento do <strong>Pensamento Computacional</strong>, está convidado a participar do nosso <strong>curso que está em andamento</strong>.</p>
-										<p><a href="webfolio.pdf" target="_blank" class="btn btn-primary btn-learn" >QUERO FAZER O CURSO</a></p>
+										<p><a href="https://bit.ly/pcinclusao" target="_blank" class="btn btn-primary btn-learn" >QUERO FAZER O CURSO</a></p>
 									</div>
 								</div>
 							</div>																					
@@ -154,7 +158,7 @@
 				</div>
 			</section>
 			
-			<section class="colorlib-services" data-section="services">
+			<section id="services" class="colorlib-services" data-section="services">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -166,7 +170,7 @@
 						<div class="col-md-4 text-center animate-box">
 							<div class="services color-1">
 								<span class="icon">
-									<i class="icon-bulb"></i>
+									<div class="icon-bulb"></div>
 								</span>
 								<div class="desc">
 									<h3>CRIATIVIDADE</h3>
@@ -177,7 +181,7 @@
 						<div class="col-md-4 text-center animate-box">
 							<div class="services color-2">
 								<span class="icon">
-									<i class="material-icons">group</i>
+									<div class="material-icons">group</div>
 								</span>
 								<div class="desc">
 									<h3>COLABORAÇÃO</h3>
@@ -186,18 +190,18 @@
 							</div>
 						</div>
 						<div class="col-md-4 text-center animate-box">
-							<div class="services color-4">
+							<div class="services color-3">
 								<span class="icon">									
-									<i class="material-icons-sharp">accessible</i>
+									<div class="material-icons-sharp">accessible</div>
 								</span>
 								<div class="desc">
-									<h3>ACESSBILIDADE</h3>
+									<h3>INCLUSÃO</h3>
 									<p>Utilize recursos de baixa tecnologia, baixo custo e facilmente adaptáveis.</p>
 								</div>
 							</div>
 						</div>						
 					</div>
-					<p><a href="webfolio.pdf" target="_blank" class="btn btn-primary btn-learn" >BAIXAR PDF</a></p>
+					<p><a href="pcinclusao.pdf" target="_blank" class="btn btn-primary btn-learn" >BAIXAR PDF</a></p>
 				</div>
 			</section>
 			
@@ -228,7 +232,7 @@
 			</div>
 			
 
-			<section class="colorlib-education" data-section="education">
+			<section id="education" class="colorlib-education" data-section="education">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -242,10 +246,10 @@
 								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingOne">
-									        <h4 class="panel-title">
+									        <h3 class="panel-title">
 									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Amanda Maria Domingos de Oliveira
 									            </a>
-									        </h4>
+									        </h3>
 									    </div>
 									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 									         <div class="panel-body">
@@ -260,10 +264,10 @@
 									</div>
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingTwo">
-									        <h4 class="panel-title">
+									        <h3 class="panel-title">
 									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Flávia Roldan Viana
 									            </a>
-									        </h4>
+									        </h3>
 									    </div>
 									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 									        <div class="panel-body">
@@ -278,10 +282,10 @@
 									</div>
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingThree">
-									        <h4 class="panel-title">
+									        <h3 class="panel-title">
 									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Gabriel Vieira Barreto
 									            </a>
-									        </h4>
+									        </h3>
 									    </div>
 									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
 											<div class="panel-body">
@@ -297,10 +301,10 @@
 
 									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingFour">
-									        <h4 class="panel-title">
+									        <h3 class="panel-title">
 									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Rodolfo Carvalho
 									            </a>
-									        </h4>
+									        </h3>
 									    </div>
 									    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 											<div class="panel-body">
@@ -321,7 +325,7 @@
 				</div>
 			</section>		
 
-			<section class="colorlib-blog" data-section="blog">
+			<section id="blog" class="colorlib-blog" data-section="blog">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -333,21 +337,21 @@
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="blog-entry">								
 								<div class="desc">																		
-									<p>BRASIL. <b>Diretrizes Curriculares Nacionais para a Educação Infantil.</b> Brasília, 1999.</p>
+									<p>BRASIL. <strong>Diretrizes Curriculares Nacionais para a Educação Infantil.</strong> Brasília, 1999.</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="blog-entry">								
 								<div class="desc">		
-									<p>OLIVEIRA, M. K. TEIXEIRA, E. <b>A questão da periodização do desenvolvimento psicológico</b>. In: OLIVEIRA, Marta K. de, SOUZA, Denise T.R. e REGO, Teresa C. (orgs). Psicologia, Educação e as temáticas da vida contemporânea. São Paulo: Moderna, 2002</p>
+									<p>OLIVEIRA, M. K. TEIXEIRA, E. <strong>A questão da periodização do desenvolvimento psicológico</strong>. In: OLIVEIRA, Marta K. de, SOUZA, Denise T.R. e REGO, Teresa C. (orgs). Psicologia, Educação e as temáticas da vida contemporânea. São Paulo: Moderna, 2002</p>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<div class="blog-entry">								
 								<div class="desc">																		
-									<p>NUNES, M. F. R. CORSINO, P. DIDONET, V. <b>Educação infantil no Brasil: primeira etapa da educação básica</b>. UNESCO, Representação no Brasil, 2011.</p>
+									<p>NUNES, M. F. R. CORSINO, P. DIDONET, V. <strong>Educação infantil no Brasil: primeira etapa da educação básica</strong>. UNESCO, Representação no Brasil, 2011.</p>
 								</div>
 							</div>
 						</div>
@@ -355,7 +359,7 @@
 				</div>
 			</section>
 
-			<section class="colorlib-contact" data-section="contact">
+			<section  id="contact" class="colorlib-contact" data-section="contact">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -367,10 +371,10 @@
 						<div class="col-md-5">
 							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="colorlib-icon">
-									<i class="material-icons">mail_outline</i>
+									<div class="material-icons">mail_outline</div>
 								</div>
 								<div class="colorlib-text">
-									<p><a class="mail-link" href="#">amandamaria.ufrn@gmail.com</a></p>
+									<a class="mail-link" href="#">amandamaria.ufrn@gmail.com</a>
 								</div>
 							</div>
 						</div>

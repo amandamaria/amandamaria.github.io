@@ -1,0 +1,62 @@
+.contrast,
+.contrast nav,
+.contrast div,
+.contrast li,
+.contrast ol,
+.contrast header,
+.contrast footer,
+.contrast section,
+.contrast main,
+.contrast aside,
+.contrast article,
+.contrast .panel-heading a.collapsed {
+    background: black !important;
+    color: white !important;
+}
+
+.contrast .icon-bulb, 
+.contrast .material-icons,
+.contrast .material-icons-sharp {
+	background-color: transparent !important;
+}
+
+.contrast .flexslider .slider-text > .slider-text-inner .btn.btn-learn,
+.contrast .btn.btn-learn {
+    background: black !important;
+    color: white !important;
+	border-color: yellow !important;
+}
+
+.contrast h1,
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast h6,
+.contrast p,
+.contrast label,
+.contrast strong,
+.contrast em,
+.contrast cite,
+.contrast q,
+.contrast i,
+.contrast b,
+.contrast u,
+.contrast span {
+    color: white !important;
+}
+
+.contrast a{
+    color: yellow !important;
+}
+
+.contrast #colorlib-aside #colorlib-main-menu ul li a:after {
+    background-color: yellow !important;
+}
+
+
+.contrast button {
+    background: black !important;
+    color: yellow !important;
+    border: none !important;
+}
