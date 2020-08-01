@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="js.js"></script>
+	<!-- jQuery -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="certificado.js"></script>
 </head>
 <body>
+<a href="https://amandamaria.github.io/pcinclusao">Início</a>
+<h1>Certificados do curso Pensamento Computacional & Inclusão</h1>
 
-<label for="cpf">Informe apenas os números do CPF</label>
-<input type="number" id="cpf" name="cpf"/>
-<button onclick="gerarCertificado()">Gerar</button>
-<button onclick="verificarCertificado()">Verificar</button>
+<div>
+	<label for="cpf">Informe o código de verificação:</label>
+	<input type="text" id="codigo" name="codigo"/>
+	<button onclick="verificarCertificado()">Verificar</button>
+</div>
 
+<br/>
+<div>
+	<label for="cpf">Informe apenas os números do CPF:</label>
+	<input type="number" id="cpf" name="cpf"/>
+	<button onclick="gerarCertificado(false)">Gerar Certificado</button>
+</div>
 <div id="divLinkCertificado"></div>
 
 </body>
