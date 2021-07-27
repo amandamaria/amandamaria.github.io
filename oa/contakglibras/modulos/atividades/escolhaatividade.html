@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conta Quilo Libras</title>
+	<script>adicionarMenu();</script>
+</head>
+
+<body>
+	<div id="divMenu"></div>	
+	
+	<div class="caixa-atividade-marrom">
+		<div>
+			<h2 class="titulo-grafico">
+				<p tooltip="gif/escolha_qual_atividade_quer.gif" flow="up" tooltip-size="medium">
+				Escolha a atividade</p>
+			</h2>
+			
+		</div>
+		<br/>
+		<div>
+			<button title="Aprenda a analisar um gráfico de barras" 
+					class="bt-escolha-atividade" 
+					tooltip="gif/aprender_analisar_grafico_barras.gif" flow="up" tooltip-size="medium" 
+					onclick="adicionarConteudo('modulos/atividades/graficobarras/questao1.html');">
+				
+				<img class="img-atividade" 
+					src="imagens/escolhaatividade/bt-atividade1.png" 
+					alt="Gráfico de barras verticais"/>	
+					
+				<div class="texto-sobreposto">
+					<img class="img-texto-atividade" 
+						src="imagens/escolhaatividade/bt-atividade1-hover.png" 
+						alt="Aprenda a analisar um gráfico de barras"/> 
+				</div>
+			</button>	
+			
+			<button title="Construa seu próprio gráfico" 
+					class="bt-escolha-atividade" 
+					tooltip="gif/construa_proprio_seu_grafico.gif" flow="up" tooltip-size="medium" 
+					onclick="adicionarConteudo('modulos/atividades/construirgrafico/construirgrafico.html');">
+					
+				<img class="img-atividade" 
+					src="imagens/escolhaatividade/bt-atividade2.png" 
+					alt="Gráfico de barras horizontais"/>	
+					
+				<div class="texto-sobreposto">
+					<img class="img-texto-atividade" 
+						src="imagens/escolhaatividade/bt-atividade2-hover.png" 
+						alt="Construa seu próprio gráfico"/>
+				</div>
+			</button>
+			
+			<button title="Conheça e estudo o gráfico de pizza" 
+				class="bt-escolha-atividade" 
+				tooltip="gif/conheca_tambem_estude_grafico_pizza.gif" flow="up" tooltip-size="medium"
+				onclick="adicionarConteudo('modulos/atividades/graficopizza/questao1.html');">
+				<img class="img-atividade" 
+					src="imagens/escolhaatividade/bt-atividade3.png" 
+					alt="Gráfico de pizza"/>	
+					
+				<div class="texto-sobreposto">
+					<img class="img-texto-atividade" 
+						src="imagens/escolhaatividade/bt-atividade3-hover.png" 
+						alt="Conheça e estudo o gráfico de pizza"/> 
+				</div>
+			</button>
+		</div>
+	</div>
+	
+	<link rel="stylesheet" href="css/atividades.css">
+</body>
+</html>

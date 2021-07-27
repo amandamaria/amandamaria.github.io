@@ -1,0 +1,60 @@
+﻿@font-face {
+  font-family: Acme;
+  src: url("../fonte/Acme-Regular.ttf");
+}
+
+body, svg {
+	font-family: Acme;
+}
+
+body, html {
+  height: 100%;
+}
+
+body{
+	background-image: url("../imagens/bg-inicio.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+/*Botões que aparecem na tela de atividades*/
+.bt-creditos, .bt-iniciar {
+	border-radius: 10%;
+	background-color: transparent;
+	border-color: transparent;
+	background-size: contain;
+	background-repeat:no-repeat;
+	width: 12em;
+	height: 8em;
+	color: transparent;
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+
+.bt-iniciar {
+	background-image: url('../imagens/atividades/bt-iniciar.png');
+}
+
+.bt-iniciar:hover {
+	background-image: url('../imagens/atividades/bt-iniciar-hover.png');
+}
+
+.bt-creditos {
+	background-image: url('../imagens/atividades/bt-creditos.png');
+}
+
+.bt-creditos:hover {
+	background-image: url('../imagens/atividades/bt-creditos-hover.png');
+}
+
+.conteudo {
+	width: 100%;
+	min-height: 45em;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+/*Fim botões que aparecem na tela de atividades*/
+
+

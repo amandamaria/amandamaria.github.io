@@ -1,0 +1,175 @@
+﻿/* Configuração padrão de todos os tooltips */
+[tooltip] {
+  position: relative;
+}
+
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none;  
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent; 
+  z-index: 0;
+}
+
+/*É aqui que balão do tooltip é configurado*/
+[tooltip]::after {
+  content: ''; 
+  
+  text-align: center;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: .83ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.45); 
+  color: #ffff;
+  z-index: 1000;
+  
+  /*Posição e alinhamento do gif dentro do component
+  background-image: url('gif/inicio.gif');*/
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: content-box, border-box;
+}
+
+/*Define o tamanho do tooltip*/
+[tooltip]:not([tooltip-size])::before,
+[tooltip]:not([tooltip-size])::after,
+[tooltip][tooltip-size^="small"]::before,
+[tooltip][tooltip-size^="small"]::after {
+  width: 9em;
+  height: 5em;
+  font-size: small; 
+}
+
+[tooltip][tooltip-size^="medium"]::before,
+[tooltip][tooltip-size^="medium"]::after {
+  width: 12em;
+  height: 7em;
+  font-size: medium; 
+}
+
+[tooltip][tooltip-size^="large"]::before,
+[tooltip][tooltip-size^="large"]::after {
+  width: 15em;
+  height: 9em;
+  font-size: large; 
+}
+/*Fim define o tamanho do tooltip*/
+
+/* Programando o evento de aparecer no hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* Não exibir tooltips vazios */
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* Aparecer acima */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: transparent;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 5px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -.5em);
+}
+
+/* Aparecer abaixo */
+[tooltip][flow^="down"]::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: transparent;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, .5em);
+}
+
+/* Aparecer à esquerda */
+[tooltip][flow^="left"]::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: transparent;
+  left: calc(0em - 5px);
+  transform: translate(-.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-.5em, -50%);
+}
+
+/* Aparecer à direita */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: transparent;
+  right: calc(0em - 5px);
+  transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+}
+
+/* Animações */
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
+
+
+/* Efeito de aparecer */ 
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}

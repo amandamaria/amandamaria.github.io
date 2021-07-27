@@ -1,0 +1,50 @@
+.caixa-botoes {
+	background-image: url('../imagens/menu/caixa-botoes.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;	
+	
+	text-align: center;
+	height: 5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-menu {
+	border-radius: 100%;
+	background-color: transparent;
+	border-color: transparent;
+	background-size: contain;
+	background-repeat:no-repeat;
+	width: 4em;
+	height: 4em;
+	color: transparent;
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+
+.btn-ajuda {
+	background-image: url('../imagens/menu/bt-ajuda.png');
+}
+
+.btn-ajuda:hover {
+	background-image: url('../imagens/menu/bt-ajuda-hover.png');
+}
+
+.btn-inicio {
+	background-image: url('../imagens/menu/bt-inicio.png');
+}
+
+.btn-inicio:hover {
+	background-image: url('../imagens/menu/bt-inicio-hover.png');
+}
+
+.btn-voltar {
+	background-image: url('../imagens/menu/bt-voltar.png');
+}
+
+.btn-voltar:hover {
+	background-image: url('../imagens/menu/bt-voltar-hover.png');
+}

@@ -1,0 +1,274 @@
+﻿@font-face {
+  font-family: Acme;
+  src: url("../fonte/Acme-Regular.ttf");
+}
+
+body, svg {
+	font-family: Acme;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+	background-image: url('../imagens/bg-padrao.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.caixa-atividade-marrom {	
+	text-align: center;
+	width: 100%;
+	max-height: 40em;
+	min-height: 25em;
+	align-items: center;
+	display: flow-root;
+	justify-content: center;
+
+	background-image: url('../imagens/caixa-marrom.png');
+	background-position: center;
+	border-radius: 10%;
+	background-repeat: no-repeat;
+	background-size: contain;	
+}
+
+.caixa-atividade-rosa {
+	text-align: center;
+	width: 40%;
+	max-height: 40em;
+	min-height: 25em;
+	align-items: center;
+	display: list-item;
+	justify-content: center;
+	
+	margin-right: 2px;
+	box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.45);
+
+	background-image: linear-gradient(to bottom right, #c26156ff , #652330ff);
+	border: 10px solid #652330ff;
+	border-radius: 10%;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.conteudo-atividade {
+	width: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	color: #6c2008ff;
+}
+
+.titulo-grafico {
+	color: white;
+	font-size: 3em;
+}
+
+.imagem-grafico {	
+	width: 70%;
+	max-height: 35em;
+	min-height: 10em;	
+	display: initial;
+	justify-content: center;
+}
+
+.caixa-pergunta {	
+	text-align: left;
+	width: 25%;
+	max-height: 40em;
+	min-height: 20em;
+	align-items: center;
+	display: grid;
+	
+	margin-left: 2px;
+	box-shadow: 0 3em 3em -.5em rgba(0, 0, 0, 0.85);
+	
+	background-image: linear-gradient(to bottom left, #fce799ff , #e5891dff);
+	border: 8px solid #e5891dff;
+	border-radius: 10%;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.enunciado {
+	width: 100%;
+	font-size: 2.5em;
+}
+
+.alternativas {
+	display: initial;	
+	justify-content: left;
+	font-size: 2em;
+}
+
+/*Input radio alternativas*/
+input[type="radio"] {
+	background-color: black;
+    background-image: linear-gradient(to bottom right, yellow, white);
+    
+	border-radius: 100%;
+	border-width: 4px;
+	border-image: linear-gradient(to bottom right, yellow, white);
+    
+	cursor: pointer;
+    display: inline-block;
+    height: 21px;
+    margin-right: 15px;
+	margin-left: 15px;
+    position: relative;
+    width: 21px;
+    -webkit-appearance: none;
+}
+
+input[type="radio"]:after {
+	background-image: linear-gradient(to bottom right, white ,yellow);
+	border-radius: 100%;
+
+	content: '';
+	display: block;
+	height: 17px;
+	left: 2px;
+	position: relative;
+	top: 2px;
+	width: 17px;
+}
+
+input[type="radio"]:checked:after, input[type="radio"]:hover:after {
+    background-image: linear-gradient(to bottom right,  #de671cff ,#4f0d03ff);
+	border-image: linear-gradient(to bottom right, white ,yellow);
+	border-width: 4px;	
+}
+
+/*Fim input radio alternativas*/
+
+/*Botões que aparecem na tela de atividades*/
+.bt-atividade {
+	border-radius: 10%;
+	background-color: transparent;
+	border-color: transparent;
+	background-size: contain;
+	background-repeat:no-repeat;
+	width: 8em;
+	height: 4em;
+	color: transparent;
+	margin-left: 10px;
+	margin-right: 10px;	
+}
+
+.bt-avancar {
+	background-image: url('../imagens/atividades/bt-avancar.png');
+}
+
+.bt-avancar:hover {
+	background-image: url('../imagens/atividades/bt-avancar-hover.png');
+}
+/*Fim botões que aparecem na tela de atividades*/
+
+/*Formatação botão de escolha da atividade*/
+.bt-escolha-atividade {
+  position: relative;
+  width: 15%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.img-atividade {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-texto-atividade {
+  width: 95%;
+  height: 100%;
+}
+
+.texto-sobreposto {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.bt-escolha-atividade:hover .texto-sobreposto {
+  bottom: 0;
+  height: 100%;
+}
+
+.texto-sobreposto-conteudo {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+/*Fim formatação botão de escolha da atividade*/
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 12%;
+  padding: 10px;
+  
+}
+
+.eixo-x {
+	color: white;  
+}
+
+.pictografico {	
+	width: 100%;
+	max-height: 45em;
+	min-height: 10em;	
+	display: initial;
+	justify-content: center;
+}
+
+.picto-button {
+	background-color: transparent;
+	border-color: transparent;
+	background-size: contain;
+	background-repeat:no-repeat;
+	color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fruta {
+	background-image: url('../imagens/atividades/construirgrafico/fruta.png');
+}
+
+.pave {
+	background-image: url('../imagens/atividades/construirgrafico/pave.png');
+}
+
+.cookie {
+	background-image: url('../imagens/atividades/construirgrafico/cookie.png');
+}
+
+.iogurte {
+	background-image: url('../imagens/atividades/construirgrafico/iogurte.png');
+}
+
+.refri {
+	background-image: url('../imagens/atividades/construirgrafico/refri.png');
+}

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Conta Quilo Libras</title>	
+	<script>
+		adicionarMenu();
+	</script>	
+</head>
+
+<body>
+	<div id="divMenu"></div>
+	<div class="conteudo-atividade">		
+		<div class="caixa-atividade-rosa">
+			<h2 class="titulo-grafico">
+				<p tooltip="gif/inicio.gif" flow="up" tooltip-size="medium">
+				Calorias dos alimentos</p>
+			</h2>
+			<div id="grafico-pizza" class="imagem-grafico"  >
+				<img width="100%" src="./imagens/atividades/graficobarras/questao1.png" usemap="#graficoBarra"/>
+				<map name="graficoBarra">
+					<!-- Eixo Y -->
+					<area tooltip="gif/pao.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="35,10,285,60" alt="Pão" href="#">
+						
+					<area tooltip="gif/cuscuz.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="35,61,285,110" alt="Cuscuz" href="#">
+						
+					<area tooltip="gif/suco_de_laranja.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="35,111,285,160" alt="Suco de Laranja" href="#">
+						
+					<area tooltip="gif/queijo.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="35,161,285,200" alt="Queijo" href="#">
+						
+					<area tooltip="gif/banana.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="35,201,285,250" alt="Banana" href="#">
+
+					<!-- Eixo X
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="290,261,390,310" title="Pão" href="#">
+						
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="391,261,490,310" title="Cuscuz" href="#">
+						
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="370,166,560,196" title="Suco de Laranja" href="#">		
+					-->						
+				</map>
+			</div>
+		</div>
+		
+		<div class="caixa-pergunta">
+			<div class="enunciado" tooltip="gif/qual_alimento_mais_calorico.gif" 
+				flow="up" tooltip-size="medium" >
+				Qual o alimento mais calórico?
+			</div>
+			<div class="alternativas">
+				<input type="radio" name="opcao" value="opcao1">
+				<label tooltip="gif/banana.gif" flow="right" tooltip-size="medium" 
+					for="opcao1">Banana</label>
+				<br/>
+				
+				<input type="radio" name="opcao" value="opcao2">
+				<label tooltip="gif/pao.gif" flow="right" tooltip-size="medium" 
+					for="opcao2">Pão</label>
+				<br/>
+				
+				<input type="radio" id="resposta-certa" name="opcao" value="opcao3">
+				<label tooltip="gif/queijo.gif" flow="right" tooltip-size="medium" 
+					for="opcao3">Queijo</label>
+				<br/>	
+				
+				<input type="radio" name="opcao" value="opcao4">
+				<label tooltip="gif/suco_de_laranja.gif" flow="right" tooltip-size="medium" 
+					for="opcao4">Suco de Laranja</label>
+				<br/>
+				
+				<input type="radio" name="opcao" value="opcao5">
+				<label tooltip="gif/cuscuz.gif" flow="right" tooltip-size="medium" 
+					for="opcao5">Cuscuz</label>
+								
+			</div>
+			<div class="centralizado">
+				<button tooltip="gif/avancar.gif" flow="up" tooltip-size="medium"
+					class="bt-atividade  bt-avancar" onclick="avancarAtividade('modulos/atividades/graficobarras/questao2.html')"> Avançar</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Modal ajuda -->
+	<div id="ajudaAtividade" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content ajuda">		
+		<div class="texto-ajuda"  >
+			<p align="left" tooltip="gif/observe_o_grafico_barra_mais_alta.gif" flow="down" tooltip-size="medium">
+			Observe o gráfico. A barra MAIOR <br/>
+			representa o alimento MAIS CALÓRICO. <br/>
+			Marque a caixa correspondente a <br/>
+			sua resposta e clique em avançar.</p>
+		</div>
+		<a class="close">&times;</a>
+	  </div>
+
+	</div>
+	
+	<!-- Modal erro -->
+	<div id="feedbackErro" class="modal">
+
+	  <!-- Modal erro content -->
+	  <div class="modal-content erro">		
+		<div class="texto-ajuda" >
+			<p align="left" tooltip="gif/veja_denovo_o_grafico_ter_certeza_resposta_correta.gif" flow="down" tooltip-size="medium">
+			Veja novamente o gráfico para <br/>
+			ter certeza da resposta correta.<br/></p>
+		</div>
+		<a class="close">&times;</a>
+	  </div>
+	</div>
+	
+	<!-- Modal acerto -->
+	<div id="feedbackAcerto" class="modal">
+
+	  <!-- Modal acerto content -->
+	  <div class="modal-content acerto">		
+		<div class="texto-ajuda">
+			<p align="left">O QUEIJO é o alimento <br/>
+			MAIS calórico. Dessa forma, o tamanho  <br/>
+			da barra desse alimento é MAIOR <br/>
+			do que as outras.</p>
+		</div>
+		<a class="close">&times;</a>
+	  </div>
+	</div>
+	
+	<link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/modal.css">	
+</body>
+</html>

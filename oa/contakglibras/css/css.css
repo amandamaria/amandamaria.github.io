@@ -1,0 +1,12 @@
+@font-face {
+  font-family: GillMTCondesed;
+  src: url("../fonte/gill-sans-mt-ext-condensed-bold.ttf");
+}
+
+html {
+	font-family: GillMTCondesed;
+}
+
+.centralizado {
+	text-align: center;
+}

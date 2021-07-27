@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Conta Quilo Libras</title>	
+	<script>
+		adicionarMenu();
+	</script>
+	<script type="text/javascript" src="js/modal.js"></script>
+</head>
+
+<body>
+	<div id="divMenu"></div>
+	<div class="conteudo-atividade">		
+		<div class="caixa-atividade-rosa">
+			<h2 class="titulo-grafico">
+				<p tooltip="gif/votos_alunos.gif" flow="up" tooltip-size="medium">
+				Votos dos alunos</p>
+			</h2>
+			<div id="grafico-pizza" class="imagem-grafico"  >
+				<img width="100%" src="./imagens/atividades/graficopizza/questao.png" usemap="#graficoPizza"/>
+				<map name="graficoPizza">
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="circle" coords="86,152,30" alt="49" href="#">
+						
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="circle" coords="194,70,30" alt="26" href="#">
+						
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="circle" coords="211,196,30" alt="24" href="#">
+
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="rect" coords="370,70,560,100" title="Pão" href="#">
+						
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="circle" coords="370,112,560,142" title="Cuscuz" href="#">
+						
+					<area tooltip="gif/inicio.gif" flow="up" tooltip-size="medium" 
+						shape="circle" coords="370,166,560,196" title="Suco de Laranja" href="#">						
+				</map>
+			</div>
+		</div>
+		
+		<div class="caixa-pergunta">
+			<div class="enunciado" tooltip="gif/qual_categoria_mais_votos.gif" flow="up" tooltip-size="medium" >
+				Qual categoria recebeu mais votos?
+			</div>
+			<div class="alternativas">
+				<input type="radio" name="gender" value="male">
+				<label tooltip="gif/bebida.gif" flow="right" tooltip-size="medium" 
+					for="male">Bebida</label>
+				<br/>
+				
+				<input type="radio" name="gender" value="female">
+				<label tooltip="gif/prato_principal.gif" flow="right" tooltip-size="medium" 
+					for="female">Principal</label>
+				<br/>	
+				
+				<input type="radio" id="resposta-certa" name="gender" value="other">
+				<label tooltip="gif/sobremesa.gif" flow="right" tooltip-size="medium" 
+					for="other">Sobremesa</label>
+			</div>
+			<div class="centralizado">
+				<button tooltip="gif/avancar.gif" flow="up" tooltip-size="medium"
+					class="bt-atividade  bt-avancar" onclick="avancarAtividade('modulos/atividades/escolhaatividade.html')"> Avançar</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Modal ajuda -->
+	<div id="ajudaAtividade" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content ajuda">		
+		<div class="texto-ajuda">
+			<p align="left" tooltip="gif/observe_grafico_tamanho_pizza.gif" flow="down" tooltip-size="medium">
+			Observe o tamanho de cada fatia no gráfico <br/>
+			pizza, note que cada tamanho representa<br/>
+			um valor, quanto maior o valor maior será <br/>
+			a fatia. Desta forma, reflita e responda<br/>
+			a questão corretamente!</p>
+		</div>
+		<a class="close">&times;</a>
+	  </div>
+
+	</div>
+	
+	<!-- Modal erro -->
+	<div id="feedbackErro" class="modal">
+
+	  <!-- Modal erro content -->
+	  <div class="modal-content erro">		
+		<div class="texto-ajuda">
+			<p align="left" tooltip="gif/veja_denovo_o_grafico_ter_certeza_resposta_correta.gif" flow="down" tooltip-size="medium">
+			Veja novamente o gráfico para <br/>
+			ter certeza da resposta correta.<br/></p>
+		</div>
+		<a class="close">&times;</a>
+	  </div>
+	</div>
+	
+	<!-- Modal acerto -->
+	<div id="feedbackErro" class="modal">
+
+	  <!-- Modal acerto content -->
+	<div class="modal-content acerto">		
+		<div class="texto-ajuda">
+			<p align="left" tooltip="gif/grafico_desenho_mostra_valores.gif" flow="down" tooltip-size="medium">
+			Um gráfico é uma figura que apresenta valores <br/>
+			gerais sobre diversas coisas. Sua resposta <br/>
+			mostrou que você entendeu bem sobre gráficos. <br/>
+			Parabéns! <br/></p>
+		</div>
+		<a class="close">&times;</a>
+	  </div>
+	</div>
+	
+	<link rel="stylesheet" href="css/atividades.css">
+	<link rel="stylesheet" href="css/modal.css">	
+</body>
+</html>

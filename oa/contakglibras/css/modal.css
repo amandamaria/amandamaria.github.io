@@ -1,0 +1,68 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80%;
+  height: 23em;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Modal Background image */
+.erro {
+  background-image: url('../imagens/bg-modal-erro.png');
+}
+
+.acerto {
+  background-image: url('../imagens/bg-modal-acerto.png');
+}
+
+.ajuda {
+  background-image: url('../imagens/bg-modal-ajuda.png');
+}
+
+.texto-ajuda {
+	text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    display: grid;
+    margin-left: 45%;
+	font-size: 1.2em;
+	color: white;
+}
+
+.texto-ajuda>p {
+	width: 30%;
+}
+
+/* The Close Button */
+.close {
+	content: url('../imagens/atividades/bt-fechar.png');	
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 10%;
+}
+
+.close:hover,
+.close:focus {
+  content: url('../imagens/atividades/bt-fechar-hover.png');
+  text-decoration: none;
+  cursor: pointer;
+}
