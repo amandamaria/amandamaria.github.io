@@ -8,7 +8,7 @@ function adicionarConteudo(pagina) {
 
 function adicionarMenu() {
 	if (typeof($("#divMenu")) !== "undefined") {
-		$("#divMenu").load("modulos/menu/menu.html");
+		$("#divMenu").load("modulos/menu/menu.html",setStatusBotaoLibras);
 	}
 }
 
@@ -45,5 +45,41 @@ function avancarAtividade(proximaTela){
 	} else {
 		//exibir feedback
 		abrirModal("feedbackErro");
+	}
+}
+
+function ativarLibras() {
+	var isActive = false;	
+	var styles = Array.from(document.styleSheets);
+	styles.map(function(styleSheet){
+		if(styleSheet.href.includes("tooltiplibras-1.0.0.css")) {
+			styleSheet.disabled = !styleSheet.disabled;
+			isActive = !styleSheet.disabled;
+		}
+	});
+	
+	mudarAparenciaBotao(isActive);
+}
+
+function setStatusBotaoLibras() {
+	var isDisabled = false;
+	var styles = Array.from(document.styleSheets);
+	styles.map(function(styleSheet){
+		if(styleSheet.href.includes("tooltiplibras-1.0.0.css")) {
+			isDisabled = styleSheet.disabled;
+		}
+	});
+	mudarAparenciaBotao(!isDisabled);
+}
+
+function mudarAparenciaBotao(isActive) {
+	var btLibras = document.getElementById("bt-libras");
+	if(isActive) {
+		btLibras.classList.remove("btn-libras-disabled");
+		if(!btLibras.classList.contains("btn-libras-active"))
+			btLibras.classList.add("btn-libras-active");
+	} else {
+		btLibras.classList.remove("btn-libras-active");
+		btLibras.classList.add("btn-libras-disabled");
 	}
 }

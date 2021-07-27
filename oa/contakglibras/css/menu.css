@@ -48,3 +48,15 @@
 .btn-voltar:hover {
 	background-image: url('../imagens/menu/bt-voltar-hover.png');
 }
+
+.btn-libras-active {
+	background-image: url('../imagens/menu/bt-libras.png');
+}
+
+.btn-libras-active:hover {
+	background-image: url('../imagens/menu/bt-libras-hover.png');
+}
+
+.btn-libras-disabled, .btn-libras-disabled :hover {
+	background-image: url('../imagens/menu/bt-libras-disabled.png');
+}
