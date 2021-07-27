@@ -5,7 +5,6 @@
 	<script>
 		adicionarMenu();
 	</script>
-	<script type="text/javascript" src="js/modal.js"></script>
 </head>
 
 <body>
@@ -45,19 +44,19 @@
 				Qual categoria recebeu mais votos?
 			</div>
 			<div class="alternativas">
-				<input type="radio" name="gender" value="male">
+				<input type="radio" name="opcao" value="bebida">
 				<label tooltip="gif/bebida.gif" flow="right" tooltip-size="medium" 
-					for="male">Bebida</label>
+					for="bebida">Bebida</label>
 				<br/>
 				
-				<input type="radio" name="gender" value="female">
+				<input type="radio" name="opcao" value="principal">
 				<label tooltip="gif/prato_principal.gif" flow="right" tooltip-size="medium" 
-					for="female">Principal</label>
+					for="principal">Principal</label>
 				<br/>	
 				
-				<input type="radio" id="resposta-certa" name="gender" value="other">
+				<input type="radio" id="resposta-certa" name="opcao" value="sobremesa">
 				<label tooltip="gif/sobremesa.gif" flow="right" tooltip-size="medium" 
-					for="other">Sobremesa</label>
+					for="sobremesa">Sobremesa</label>
 			</div>
 			<div class="centralizado">
 				<button tooltip="gif/avancar.gif" flow="up" tooltip-size="medium"
@@ -99,16 +98,16 @@
 	</div>
 	
 	<!-- Modal acerto -->
-	<div id="feedbackErro" class="modal">
+	<div id="feedbackAcerto" class="modal">
 
 	  <!-- Modal acerto content -->
 	<div class="modal-content acerto">		
 		<div class="texto-ajuda">
 			<p align="left" tooltip="gif/grafico_desenho_mostra_valores.gif" flow="down" tooltip-size="medium">
-			Um gráfico é uma figura que apresenta valores <br/>
-			gerais sobre diversas coisas. Sua resposta <br/>
-			mostrou que você entendeu bem sobre gráficos. <br/>
-			Parabéns! <br/></p>
+			Um gráfico é uma figura que apresenta  <br/>
+			valores gerais sobre diversas coisas. <br/> 
+			Sua resposta mostrou que você entendeu <br/>
+			bem sobre gráficos. Parabéns! <br/></p>
 		</div>
 		<a class="close">&times;</a>
 	  </div>

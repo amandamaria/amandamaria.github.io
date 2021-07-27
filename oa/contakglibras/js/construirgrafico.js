@@ -1,7 +1,26 @@
+function changeQtdItem(className, valueToSum, itemRow) {
+	var retorno =  false;
+	qtdItems.values.forEach(function(item){
+		
+	});
+	return retorno;
+}
+
+function clickPictoButton() {	
+	if(this.classList.contains(this.name)) {
+		this.classList.remove(this.name);
+		this.classList.remove("text-invisible");		
+	} else {
+		this.classList.add(this.name);
+		this.classList.add("text-invisible");	
+	}
+}
+
 function gerarGrid() {
 	var classes = ["","refri","fruta","pave","cookie","iogurte"];
 	var area = document.getElementById("pictografico");
-	var x = 5;
+	var eixoYValue = 5;
+	var rowNumber = 4;
 	for(var i=0; i < 5; i++) {
 		var row = document.createElement("div");
 		row.classList.add("row");
@@ -9,21 +28,27 @@ function gerarGrid() {
 			var col = document.createElement("div");
 			col.classList.add("column");
 			if(j==0){
-				var textButton = document.createTextNode(x);  
+				var textButton = document.createTextNode(eixoYValue);  
 				col.classList.add("eixo-x");
 				col.appendChild(textButton);				
-				x=x-1;
+				eixoYValue=eixoYValue-1;
 			}
 			if(j>0){
+								
 				var button = document.createElement("button");
-				var textButton = document.createTextNode("+");  
+				var textButton = document.createTextNode("+");
 				button.classList.add("picto-button");
-				button.classList.add(classes[j]);
-				button.appendChild(textButton);				
+				button.id =classes[j]+"-"+rowNumber;
+				button.name = classes[j];
+				button.onclick = clickPictoButton.bind(button);
+				button.appendChild(textButton);					
+				
 				col.appendChild(button);
+				console.log(rowNumber);
 			} 
 			row.appendChild(col);
 		}
+		rowNumber = rowNumber - 1;
 		area.appendChild(row)
 	}
 	var eixoX = document.createElement("div");
