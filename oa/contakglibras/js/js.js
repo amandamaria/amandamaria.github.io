@@ -6,6 +6,10 @@ function adicionarConteudo(pagina) {
 	$("#divConteudo").load(pagina);
 }
 
+function voltarPagina() {
+	adicionarConteudo($("#paginaAnterior").val());
+}
+
 function adicionarMenu() {
 	if (typeof($("#divMenu")) !== "undefined") {
 		$("#divMenu").load("modulos/menu/menu.html",setStatusBotaoLibras);
