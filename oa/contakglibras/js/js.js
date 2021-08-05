@@ -52,6 +52,7 @@ function avancarAtividade(proximaTela){
 	}
 }
 
+
 function ativarLibras() {
 	var isActive = false;	
 	var styles = Array.from(document.styleSheets);

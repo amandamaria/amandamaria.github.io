@@ -5,6 +5,7 @@
 	<script type="text/javascript">
 		adicionarMenu();
 		gerarGrid();
+		iniciarDados();
 	</script>
 </head>
 
@@ -41,7 +42,7 @@
 			</div>
 			<div class="centralizado">
 				<button tooltip="gif/avancar.gif" flow="up" tooltip-size="medium"
-					class="bt-atividade  bt-avancar" onclick="avancarAtividade('modulos/atividades/escolhaatividade.html')"> Avançar</button>
+					class="bt-atividade  bt-avancar" onclick="corrigirAtividade('modulos/atividades/escolhaatividade.html')"> Avançar</button>
 			</div>
 		</div>
 	</div>
@@ -52,12 +53,10 @@
 	  <!-- Modal content -->
 	  <div class="modal-content ajuda">		
 		<div class="texto-ajuda">
-			<p align="left" tooltip="gif/observe_grafico_tamanho_pizza.gif" flow="down" tooltip-size="medium">
-			Observe o tamanho de cada fatia no gráfico <br/>
-			pizza, note que cada tamanho representa<br/>
-			um valor, quanto maior o valor maior será <br/>
-			a fatia. Desta forma, reflita e responda<br/>
-			a questão corretamente!</p>
+			<p align="left">
+			Cada alimento contém um valor de voto<br/>
+			Clique nos ícones do gráfico, <br/> 
+			para inserí-los corretamente!</p>
 		</div>
 		<a class="close">&times;</a>
 	  </div>
@@ -79,16 +78,16 @@
 	</div>
 	
 	<!-- Modal acerto -->
-	<div id="feedbackErro" class="modal">
+	<div id="feedbackAcerto" class="modal">
 
 	  <!-- Modal acerto content -->
 	<div class="modal-content acerto">		
 		<div class="texto-ajuda">
 			<p align="left" tooltip="gif/grafico_desenho_mostra_valores.gif" flow="down" tooltip-size="medium">
-			Um gráfico é uma figura que apresenta valores <br/>
-			gerais sobre diversas coisas. Sua resposta <br/>
-			mostrou que você entendeu bem sobre gráficos. <br/>
-			Parabéns! <br/></p>
+			Um gráfico é uma figura que apresenta <br/> 
+			valores gerais sobre diversas coisas.  <br/>
+			Sua resposta mostrou que você entendeu<br/>
+			bem sobre gráficos. Parabéns! <br/></p>
 		</div>
 		<a class="close">&times;</a>
 	  </div>
