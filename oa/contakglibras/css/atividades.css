@@ -220,10 +220,21 @@ input[type="radio"]:checked:after, input[type="radio"]:hover:after {
 
 /* Create two equal columns that floats next to each other */
 .column {
-  float: left;
-  width: 12%;
-  padding: 10px;
-  
+	float: left;
+	width: 12%;
+	padding: 10px;
+}
+
+.col-eixo-y {
+	border-right-color: white;
+	border-right-style: solid;
+	border-right-width: 5px;
+}
+
+.row-eixo-x {
+	border-top-color: white;
+	border-top-style: solid;
+	border-top-width: medium;
 }
 
 .eixo-x {
@@ -250,12 +261,6 @@ input[type="radio"]:checked:after, input[type="radio"]:hover:after {
   content: "";
   display: table;
   clear: both;
-}
-
-#pictografico {
-	background-image:url('../imagens/atividades/construirgrafico/bg-grafico.png');
-	background-repeat:no-repeat;
-	background-size: contain;
 }
 
 .text-invisible {

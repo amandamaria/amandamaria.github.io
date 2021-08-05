@@ -71,6 +71,7 @@ function gerarGrid() {
 			if(j==0){
 				var textButton = document.createTextNode(eixoYValue);  
 				col.classList.add("eixo-x");
+				col.classList.add("col-eixo-y");
 				col.appendChild(textButton);				
 				eixoYValue=eixoYValue-1;
 			}
@@ -98,6 +99,7 @@ function gerarGrid() {
 		var col = document.createElement("div");
 		col.classList.add("column");
 		col.classList.add("eixo-x");
+		col.classList.add("row-eixo-x");
 		if(j>0){			
 			var text = document.createTextNode(namesToShow[classes[j]]); 
 			col.appendChild(text);			
