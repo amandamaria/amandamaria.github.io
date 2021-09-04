@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # References
 
-Tutorial [https://retool.com/blog/building-an-admin-console-in-react-admin/](Building an admin console in react-admin)
+Tutorial [Building an admin console in react-admin](https://retool.com/blog/building-an-admin-console-in-react-admin)
 
 ## Available Scripts
 
