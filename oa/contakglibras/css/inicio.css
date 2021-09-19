@@ -12,7 +12,7 @@ body, html {
 }
 
 body{
-	background-image: url("../imagens/bg-inicio.png");
+	background-image: url("../imagens/bg-inicio-new.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;	
@@ -28,6 +28,7 @@ body{
 	width: 12em;
 	height: 8em;
 	color: transparent;
+	margin-top: 2em;
 	margin-left: 10px;
 	margin-right: 10px;	
 }
@@ -54,6 +55,14 @@ body{
 	align-items: center;
 	display: flex;
 	justify-content: center;
+    flex-direction: column;
+}
+
+.espaco-botoes {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+    flex-direction: row;
 }
 /*Fim botões que aparecem na tela de atividades*/
 
