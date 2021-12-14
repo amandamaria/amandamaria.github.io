@@ -57,7 +57,7 @@ function ativarLibras() {
 	var isActive = false;	
 	var styles = Array.from(document.styleSheets);
 	styles.map(function(styleSheet){
-		if(styleSheet.href.includes("tooltiplibras-1.0.0.css")) {
+		if(styleSheet.href != null && styleSheet.href.includes("tooltiplibras-1.0.0.css")) {
 			styleSheet.disabled = !styleSheet.disabled;
 			isActive = !styleSheet.disabled;
 		}
@@ -70,7 +70,7 @@ function setStatusBotaoLibras() {
 	var isDisabled = false;
 	var styles = Array.from(document.styleSheets);
 	styles.map(function(styleSheet){
-		if(styleSheet.href.includes("tooltiplibras-1.0.0.css")) {
+		if(styleSheet.href != null && styleSheet.href.includes("tooltiplibras-1.0.0.css")) {
 			isDisabled = styleSheet.disabled;
 		}
 	});
